@@ -1,0 +1,43 @@
+/* Ajustes específicos de la página de inicio */
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1s ease-in-out; /* Un pequeño efecto de entrada */
+}
+
+/* Hacer que la imagen de bienvenida sea más grande y llamativa */
+.home-page img {
+  width: 100%;
+  max-width: 700px; /* Más ancha que las imágenes normales */
+  border-radius: 15px; /* Bordes más redondeados */
+  border: 2px solid #333; /* Un marco sutil */
+}
+
+/* El texto de bienvenida un poco más grande */
+.home-page p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  font-style: italic; /* Un toque más elegante */
+  color: #e0e0e0;
+}
+
+/* El título de la portada puede tener un poco más de margen */
+.home-page h1 {
+  margin-top: 1rem;
+  font-size: 3.5rem; /* Más grande que los títulos de otras páginas */
+}
+
+/* Animación sencilla (opcional) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

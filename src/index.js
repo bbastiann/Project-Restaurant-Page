@@ -1,11 +1,13 @@
-import "./styles.css";
-import { cargarHome } from "./home.js";
-import { cargarMenu } from "./menu.js";
-import { cargarAbout } from "./about.js";
+import "./css/styles.css";
+import "./css/home.css";
+import "./css/menu.css";
+import "./css/about.css";
+
+import { cargarHome } from "./modules/home.js";
+import { cargarMenu } from "./modules/menu.js";
+import { cargarAbout } from "./modules/about.js";
 
 cargarHome();
-
-
 const homeButton = document.getElementById("home-btn");
 const aboutButton = document.getElementById("about-btn");
 const menuButton = document.getElementById("menu-btn");
