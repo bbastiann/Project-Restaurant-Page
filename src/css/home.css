@@ -1,43 +1,91 @@
-/* Ajustes específicos de la página de inicio */
-
 .home-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  animation: fadeIn 1s ease-in-out; /* Un pequeño efecto de entrada */
 }
 
-/* Hacer que la imagen de bienvenida sea más grande y llamativa */
 .home-page img {
   width: 100%;
-  max-width: 700px; /* Más ancha que las imágenes normales */
-  border-radius: 15px; /* Bordes más redondeados */
-  border: 2px solid #333; /* Un marco sutil */
+  max-width: 700px;
+  border-radius: 15px;
+  border: 2px solid #333;
+  margin: 2rem 0;
 }
 
-/* El texto de bienvenida un poco más grande */
 .home-page p {
   font-size: 1.2rem;
   max-width: 600px;
-  font-style: italic; /* Un toque más elegante */
+  font-style: italic;
   color: #e0e0e0;
 }
 
-/* El título de la portada puede tener un poco más de margen */
 .home-page h1 {
-  margin-top: 1rem;
-  font-size: 3.5rem; /* Más grande que los títulos de otras páginas */
+  font-size: 3.5rem;
 }
 
-/* Animación sencilla (opcional) */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+.info-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 3rem 0;
+}
+
+@media (min-width: 768px) {
+  .info-container {
+    grid-template-columns: 1fr 1fr;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+}
+
+.info-card {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info-card h2 {
+  font-family: 'Georgia', serif;
+  color: #d4af37;
+  font-size: 1.5rem;
+}
+
+.info-card p {
+  font-size: 1rem;
+  font-style: normal;
+  color: #cccccc;
+  margin: 0;
+}
+
+.contacto-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 700px;
+  padding: 3rem;
+  border-top: 1px solid #333;
+}
+
+.contacto-container h2 {
+  font-family: 'Georgia', serif;
+  font-size: 2rem;
+  color: white;
+}
+
+.contacto-container p {
+  font-size: 1.1rem;
+  font-style: normal;
+  color: #a0a0a0;
+}
+
+.redes-texto {
+  font-size: 0.95rem !important;
+  color: #d4af37 !important;
+  margin-top: 1rem;
 }

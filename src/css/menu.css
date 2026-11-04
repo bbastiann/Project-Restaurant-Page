@@ -1,55 +1,51 @@
-/* Contenedor principal del menú */
 .menu-page {
-  animation: fadeIn 1s ease-in-out;
-}
-
-/* Lista de platos */
-.platos-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.platos-container {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem;
   margin-top: 3rem;
-  text-align: left; /* El menú suele leerse mejor alineado a la izquierda */
+  width: 100%;
 }
 
-/* Cada plato individual */
 .plato {
-  border-bottom: 1px dashed #444; /* Línea punteada, muy típica en menús */
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px dashed #444;
   padding-bottom: 1.5rem;
-  position: relative;
+  text-align: left;
 }
 
-/* Quitar la línea al último plato */
 .plato:last-child {
   border-bottom: none;
 }
 
-/* El nombre del plato */
+.plato-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
 .plato h3 {
   font-family: 'Georgia', serif;
   font-size: 1.4rem;
   color: #fff;
-  margin: 0 0 0.5rem 0;
 }
 
-/* El precio del plato */
 .plato span {
   color: #d4af37;
   font-weight: bold;
   font-size: 1.3rem;
   font-family: 'Georgia', serif;
-  /* En lugar de float: right (que es un poco antiguo), 
-     podemos posicionarlo de forma más limpia */
-  position: absolute;
-  right: 0;
-  top: 0;
 }
 
-/* La descripción del plato */
 .plato p {
   font-size: 0.95rem;
   color: #a0a0a0;
-  max-width: 80%; /* Deja espacio para que el precio no choque con el texto */
   line-height: 1.6;
-  margin: 0;
 }
